@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AMOS Watches | עמוס ⌚</title>
+    <meta
+      name="description"
+      content="AMOS Watches | עמוס — בוטיק שעונים ותכשיטים. עסק שנבנה בחסדי השם. Luxury Watches • Premium Service. יוקרה בכל שנייה."
+    />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Heebo:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="manifest" href="/manifest.json" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "JewelryStore",
+            "name": "AMOS Watches | עמוס",
+            "url": "/",
+            "description": "בוטיק שעונים ותכשיטים | AMOS Watches עמוס",
+            "areaServed": "Israel",
+            "sameAs": ["https://www.instagram.com/amos_watches_il/"]
+          }
+        ]
+      }
+    </script>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script src="/js/seo.js" defer></script>
+  </head>
+  <body>
+    <div class="progress" id="progress" aria-hidden="true"></div>
+    <div class="noise" aria-hidden="true"></div>
+
+    <svg class="icons-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <symbol id="icon-instagram" viewBox="0 0 24 24">
+        <path
+          fill="currentColor"
+          d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zM17.5 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"
+        />
+      </symbol>
+    </svg>
+
+    <header class="nav">
+      <a class="logo" href="#top">
+        <span class="logo-en">AMOS Watches</span>
+        <span class="logo-he">עמוס ⌚</span>
+      </a>
+      <nav class="nav-links" id="nav-links" aria-label="ניווט ראשי">
+        <a href="#featured">נבחרים</a>
+        <a href="#collections">אוספים</a>
+        <a href="#reviews">ביקורות</a>
+        <a href="#atelier">הבוטיק</a>
+        <a href="#contact">יצירת קשר</a>
+      </nav>
+      <div class="nav-tools">
+        <span class="live-pill" id="live-pill" title="גולשים באתר עכשיו">
+          <span class="live-dot"></span>
+          <span id="live-count">1</span>
+          <span class="live-label">אונליין</span>
+        </span>
+        <button class="icon-btn" id="search-open" type="button" aria-label="חיפוש">⌕</button>
+        <button class="icon-btn" id="wish-open" type="button" aria-label="שמורים">♥</button>
+        <button class="icon-btn" id="cart-open" type="button" aria-label="עגלה">
+          👜 <span id="cart-count">0</span>
+        </button>
+        <a
+          class="ig-link nav-ig"
+          href="https://www.instagram.com/amos_watches_il/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="אינסטגרם AMOS Watches"
+        >
+          <svg class="ig-icon" aria-hidden="true"><use href="#icon-instagram"></use></svg>
+          <span class="ig-handle">@amos_watches_il</span>
+        </a>
+        <button class="hamburger" id="menu-toggle" type="button" aria-label="תפריט" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <div class="drawer-backdrop" id="drawer-backdrop" hidden></div>
+    <aside class="drawer" id="drawer" aria-hidden="true">
+      <p class="eyebrow">AMOS Watches | עמוס ⌚</p>
+      <a href="#featured" class="drawer-link">נבחרים</a>
+      <a href="#collections" class="drawer-link">אוספים</a>
+      <a href="#reviews" class="drawer-link">ביקורות</a>
+      <a href="#atelier" class="drawer-link">הבוטיק</a>
+      <a href="#contact" class="drawer-link">יצירת קשר</a>
+      <a href="/checkout" class="drawer-link">קופה</a>
+      <a href="/admin" class="drawer-link muted">כניסת מנהל</a>
+    </aside>
+
+    <main id="top">
+      <section class="hero">
+        <p class="eyebrow">Luxury Watches • Premium Service</p>
+        <h1>AMOS Watches<br /><em>עמוס ⌚</em></h1>
+        <p class="lede">
+          עסק שנבנה בחסדי השם 🙏<br />
+          יוקרה בכל שנייה ⏱
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-gold" href="#collections">לצפייה באוסף</a>
+          <a
+            class="btn btn-ghost ig-link"
+            href="https://www.instagram.com/amos_watches_il/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg class="ig-icon" aria-hidden="true"><use href="#icon-instagram"></use></svg>
+            אינסטגרם
+          </a>
+        </div>
+      </section>
+
+      <section class="marquee">
+        <div class="marquee-track">
+          <span>AMOS Watches</span><span>עמוס ⌚</span>
+          <span>Luxury Watches</span><span>Premium Service</span>
+          <span>יוקרה בכל שנייה ⏱</span>
+          <span>עסק שנבנה בחסדי השם 🙏</span>
+          <span>AMOS Watches</span><span>עמוס ⌚</span>
+          <span>Luxury Watches</span><span>Premium Service</span>
+          <span>יוקרה בכל שנייה ⏱</span>
+          <span>עסק שנבנה בחסדי השם 🙏</span>
+        </div>
+      </section>
+
+      <section id="featured" class="collection">
+        <header class="section-head">
+          <p class="eyebrow">Private selection</p>
+          <h2>נבחרי הבוטיק</h2>
+          <p>פריטים שמסומנים כמומלצים בפאנל הניהול.</p>
+        </header>
+        <div class="grid" id="featured-grid"></div>
+      </section>
+
+      <div id="collections"></div>
+
+      <section id="reviews" class="collection collection-alt">
+        <header class="section-head">
+          <p class="eyebrow">Google reviews</p>
+          <h2>מה אומרים עלינו</h2>
+          <p>ביקורות נמשכות מ-Google כשמפתח ה-API מוגדר בשרת.</p>
+        </header>
+        <div class="grid" id="reviews-grid"></div>
+      </section>
+
+      <section id="atelier" class="atelier">
+        <div class="atelier-copy">
+          <p class="eyebrow">The Atelier</p>
+          <h2>AMOS Watches | עמוס ⌚</h2>
+          <p>
+            עסק שנבנה בחסדי השם 🙏 — Luxury Watches • Premium Service.
+            יוקרה בכל שנייה ⏱. בוטיק למי שמחפש שעון עם נוכחות, תכשיט עם סיפור,
+            וליווי אישי בלי לחץ.
+          </p>
+          <ul>
+            <li>אימות ואמינות בפריטי יוקרה</li>
+            <li>רכישה בכרטיס אשראי עם משלוח עד הבית — עלינו</li>
+            <li>ליווי אישי עד המסירה</li>
+          </ul>
+        </div>
+        <figure class="atelier-visual">
+          <img
+            src="https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?auto=format&fit=crop&w=1200&q=80"
+            alt="שעון יוקרה על משטח כהה"
+          />
+        </figure>
+      </section>
+
+      <section id="contact" class="contact">
+        <p class="eyebrow">Private client</p>
+        <h2>לשאול, להזמין, להגיע</h2>
+        <p>אפשר לרכוש מהאתר בכרטיס אשראי עם משלוח עד הבית על חשבוננו, לכתוב באינסטגרם, או להשאיר פרטים כאן.</p>
+        <form class="inquiry" id="inquiry-form">
+          <label>
+            שם
+            <input type="text" name="name" required autocomplete="name" />
+          </label>
+          <label>
+            טלפון
+            <input type="tel" name="phone" required autocomplete="tel" />
+          </label>
+          <label class="full">
+            מה מעניין אתכם?
+            <textarea name="message" rows="3" placeholder="שעון, טבעת, מתנה..."></textarea>
+          </label>
+          <button class="btn btn-gold full" type="submit">שליחה לוואטסאפ</button>
+        </form>
+        <p class="form-note" id="form-note" hidden></p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-brand">
+        <strong>AMOS Watches | עמוס ⌚</strong>
+        <span>עסק שנבנה בחסדי השם 🙏</span>
+      </div>
+      <a
+        class="ig-link"
+        href="https://www.instagram.com/amos_watches_il/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <svg class="ig-icon" aria-hidden="true"><use href="#icon-instagram"></use></svg>
+        @amos_watches_il
+      </a>
+    </footer>
+
+    <dialog class="modal" id="product-modal">
+      <article class="modal-card">
+        <button class="modal-close" type="button" aria-label="סגירה">&times;</button>
+        <img id="modal-image" alt="" />
+        <div class="modal-body">
+          <p class="eyebrow" id="modal-cat"></p>
+          <h3 id="modal-title"></h3>
+          <p id="modal-desc"></p>
+          <p class="price" id="modal-price"></p>
+          <div class="modal-actions">
+            <button class="btn btn-gold" type="button" id="modal-ask">שאלו על הפריט</button>
+            <button class="btn btn-ghost" type="button" id="modal-cart">לעגלה</button>
+            <button class="btn btn-ghost" type="button" id="modal-wish">שמירה</button>
+          </div>
+        </div>
+      </article>
+    </dialog>
+
+    <div class="overlay-panel" id="search-panel" hidden>
+      <input id="search-input" type="search" placeholder="חיפוש שעון, טבעת, זהב..." />
+      <div id="search-results"></div>
+    </div>
+
+    <div class="overlay-panel" id="wish-panel" hidden>
+      <h3>שמורים אצלכם</h3>
+      <div id="wish-list"></div>
+    </div>
+
+    <button class="ai-launch" id="ai-launch" type="button">עוזר AMOS</button>
+    <section class="ai-panel" id="ai-panel" hidden>
+      <header>
+        <strong>עוזר AMOS</strong>
+        <button type="button" id="ai-close" aria-label="סגירה">&times;</button>
+      </header>
+      <div class="ai-log" id="ai-log"></div>
+      <form id="ai-form">
+        <input id="ai-input" maxlength="280" placeholder="שאלו על שעון, תקציב או הזמנה..." />
+        <button class="btn btn-gold" type="submit">שליחה</button>
+      </form>
+    </section>
+
+    <script src="/js/app.js"></script>
+  </body>
+</html>

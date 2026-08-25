@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>פאנל ניהול | AMOS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Heebo:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+            <link rel="manifest" href="/manifest.json" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/admin.css" />
+  </head>
+  <body class="admin-body">
+    <section class="login-card" id="login-view">
+      <p class="eyebrow">AMOS Atelier</p>
+      <h1>כניסת מנהל</h1>
+      <form id="login-form">
+        <label>אימייל (רשות)<input type="email" name="email" autocomplete="username" placeholder="owner@amos" /></label>
+        <label>סיסמה<input type="password" name="password" required autocomplete="current-password" /></label>
+        <button class="btn btn-gold" type="submit">כניסה</button>
+        <p class="form-note" id="login-error" hidden></p>
+      </form>
+    </section>
+
+    <div id="admin-view" hidden>
+      <header class="admin-nav">
+        <a class="logo" href="/">
+          <span class="logo-en">AMOS Admin</span>
+          <span class="logo-he">עמוס ⌚</span>
+        </a>
+        <div class="nav-tools">
+          <span class="live-pill"><span class="live-dot"></span><span id="admin-online">1</span> אונליין</span>
+          <a class="btn btn-ghost" href="/">לאתר</a>
+          <button class="btn btn-ghost" id="logout" type="button">יציאה</button>
+        </div>
+      </header>
+
+      <main class="admin-main">
+        <section class="stats" id="stats"></section>
+
+        <section class="admin-grid">
+          <article class="panel">
+            <h2>הזמנות</h2>
+            <div id="order-list" class="list"></div>
+          </article>
+          <article class="panel">
+            <h2>עוזר AI למנהל</h2>
+            <form id="admin-ai-form" class="stack">
+              <textarea id="admin-ai-input" rows="3" placeholder="שאלו על מלאי, הזמנות או אבטחה"></textarea>
+              <button class="btn btn-gold" type="submit">שאלה</button>
+            </form>
+            <pre id="admin-ai-out" class="empty"></pre>
+          </article>
+        </section>
+
+        <section class="admin-grid">
+          <article class="panel">
+            <h2>הרשאות</h2>
+            <form id="role-form" class="stack">
+              <label>אימייל<input name="email" type="email" required /></label>
+              <label>סיסמה ראשונית<input name="password" /></label>
+              <label>תפקיד
+                <select name="role">
+                  <option value="staff">staff</option>
+                  <option value="admin">admin</option>
+                  <option value="owner">owner</option>
+                </select>
+              </label>
+              <button class="btn btn-gold" type="submit">שמירת תפקיד</button>
+            </form>
+            <div id="user-list" class="list"></div>
+          </article>
+          <article class="panel">
+            <h2>אבטחה</h2>
+            <form id="sec-form" class="stack">
+              <label>הודעה למנהל<textarea name="message" rows="2" required></textarea></label>
+              <button class="btn btn-gold" type="submit">שליחת התראת אבטחה</button>
+            </form>
+            <div id="sec-list" class="list"></div>
+          </article>
+        </section>
+
+        <section class="admin-grid">
+          <article class="panel">
+            <h2>קטגוריות</h2>
+            <form id="category-form" class="stack">
+              <input type="hidden" name="id" />
+              <label>שם<input name="name" required placeholder="למשל: שעונים" /></label>
+              <label>סלאג באנגלית<input name="slug" placeholder="watches" /></label>
+              <label>תיאור<textarea name="description" rows="2"></textarea></label>
+              <label>סדר<input name="sort_order" type="number" value="0" /></label>
+              <button class="btn btn-gold" type="submit">שמירת קטגוריה</button>
+              <button class="btn btn-ghost" type="reset">חדש</button>
+            </form>
+            <div id="category-list" class="list"></div>
+          </article>
+
+          <article class="panel">
+            <h2>פריטים</h2>
+            <form id="product-form" class="stack" enctype="multipart/form-data">
+              <input type="hidden" name="id" />
+              <label>קטגוריה<select name="category_id" required></select></label>
+              <label>שם הפריט<input name="title" required /></label>
+              <label>מחיר בשקלים<input name="price" type="number" min="0" required /></label>
+              <label>תיאור<textarea name="description" rows="3"></textarea></label>
+              <label>קישור לתמונה<input name="image_url" placeholder="https://..." /></label>
+              <label>העלאת קובץ<input name="image" type="file" accept="image/*" /></label>
+              <label class="check"><input name="featured" type="checkbox" /> מומלץ באתר</label>
+              <button class="btn btn-gold" type="submit">שמירת פריט</button>
+              <button class="btn btn-ghost" type="reset">פריט חדש</button>
+            </form>
+            <div id="product-list" class="list"></div>
+          </article>
+        </section>
+      </main>
+    </div>
+    <script src="/js/admin.js"></script>
+  </body>
+</html>

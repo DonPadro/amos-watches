@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>קופה | AMOS Watches</title>
+    <meta name="description" content="השלמת הזמנה מאובטחת בבוטיק AMOS Watches." />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script src="/js/seo.js" defer></script>
+  </head>
+  <body>
+    <header class="nav">
+      <a class="logo" href="/">
+        <span class="logo-en">AMOS Watches</span>
+        <span class="logo-he">עמוס ⌚</span>
+      </a>
+      <a class="btn btn-ghost" href="/">חזרה לאוסף</a>
+    </header>
+    <main class="collection">
+      <p class="eyebrow">Checkout</p>
+      <h1>קופה מאובטחת</h1>
+      <p>רכישה בכרטיס אשראי, עם משלוח עד הבית — עלינו.</p>
+      <ul class="checkout-perks">
+        <li>משלוח עד הבית בכל הארץ, על חשבוננו</li>
+        <li>תשלום בכרטיס אשראי בדף סליקה מאובטח</li>
+      </ul>
+      <div id="cart-box" class="list"></div>
+      <form class="inquiry" id="checkout-form">
+        <label>שם<input name="name" required autocomplete="name" /></label>
+        <label>טלפון<input name="phone" required autocomplete="tel" /></label>
+        <label class="full">אימייל לקבלה<input name="email" type="email" required autocomplete="email" /></label>
+        <label class="full">כתובת למשלוח<input name="address" required autocomplete="street-address" placeholder="רחוב ומספר בית" /></label>
+        <label>עיר<input name="city" required autocomplete="address-level2" /></label>
+        <label>מיקוד<input name="zip" autocomplete="postal-code" inputmode="numeric" /></label>
+        <label class="full">הערות למשלוח<textarea name="notes" rows="2" placeholder="קוד בניין, שעות מסירה..."></textarea></label>
+        <button class="btn btn-gold full" type="submit">המשך לתשלום</button>
+      </form>
+      <p class="muted" id="pay-hint"></p>
+      <p class="form-note" id="checkout-note" hidden></p>
+    </main>
+    <script src="/js/checkout.js"></script>
+  </body>
+</html>
